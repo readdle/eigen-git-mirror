@@ -382,7 +382,7 @@ class Transpose<TranspositionsBase<TranspositionsDerived> >
       */
     template<typename OtherDerived> friend
     const Product<OtherDerived, Transpose, AliasFreeProduct>
-    operator*(const MatrixBase<OtherDerived>& matrix, const Transpose& trt)
+    operator*(const MatrixBase<OtherDerived>& matrix, const Transpose<OtherDerived>& trt)
     {
       return Product<OtherDerived, Transpose, AliasFreeProduct>(matrix.derived(), trt.derived());
     }
